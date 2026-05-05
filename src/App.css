@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: rgb(49, 46, 46);
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: 300;
+    margin: 0 50px;
+}
+
+  .hh3 {
+  font-weight: 600;
+    font-size: 20px;
+  }
+
+  .App {
+    margin: 50px auto;
+  }
+
+  #Header {
+    display: flex;
+  }
+
+  .lu {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+  }
+
+  .listHeaders {
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 900 ease;
+  }
+
+  .listHeaders:hover{
+    opacity: 0.5;
+  }
+
+  #banner {
+    margin: 50px 0;
+    background: url('./images/image1.jpg') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #9d9d9d;
+    position: relative;
+  }
+
+  #banner::after {
+    content: 'Найкращі товари для вашого дому';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  #banner::before {
+    content: 'за низькими цінами';
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.categories div {
+  display: inline-block;
+  background: #f2f2f2;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+}
+.categories div:hover {
+  border-color: silver;
+  transform: scale(1.1);
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main .item{
+  width: 30%;
+  margin-bottom: 50px;
+  background: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.main .item img {
+  height: 70%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+
+.main .item img:hover {
+  transform: scale(1.03);
+}
+
+.main .add-to-cart:hover {
+  transform: scale(1.2) translateY(-2px)
+}
+
+.main .add-to-cart{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #7d78b6;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 500ms ease;
+}
+
+.ft {
+  text-align: center;
+}
+.ft h2 {
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 5%;
+}
+
+.delete-show {
+  margin: 1.5% auto;
+  float: right;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+.delete-show:hover {
+  transform: scale(1.5);
+}
+
+.main .add-to-cart,
+.full-item .add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #7d78b6;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+}
+
+.main .add-to-cart:hover,
+.full-item .add-to-cart:hover {
+    transform: scale(1.2) translateY(-2px)
+}
+
+.shop-cart {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  width: 250px;
+  background: #fafafa;
+  -webkit-box-shadow: 5px 5px 20px -7px #353535; 
+  box-shadow: 5px 5px 20px -7px #353535;
+  z-index: 1000;
+  padding: 20px;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.shop-cart img {
+  width: 50%;
+}
+
+
+.shop-cart .item h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.shop-cart .item p {
+  color: #807777;
+  font-weight: 600;
+}
+
+.shop-cart .item .delete-icon {
+  color: rgb(58, 55, 55);
+  float: right;
+  position: relative;
+  top: -25px;
+  cursor: pointer;
+  transition: color transform 500ms ease;
+}
+
+.shop-cart .item .delete-icon:hover {
+  color: rgb(12, 12, 12);
+  transform: scale(1.5);
+}
+
