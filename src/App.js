@@ -8,7 +8,7 @@ import { Footer } from './components/Footer';
 function App() {
   const [chooseCategory,setChooseCategory] = useState("all")
   const [cartItem, setCartItem] = useState([])
-  const [state, set_state] = useState({ 
+  const [state] = useState({ 
     item : [
     {
       id: 0,
