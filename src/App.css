@@ -30,10 +30,10 @@ body {
     display: flex;
     margin-left: auto;
     list-style: none;
+    gap: 20px;
   }
 
   .listHeaders {
-    margin-left: 25px;
     cursor: pointer;
     transition: opacity 900 ease;
   }
@@ -58,8 +58,9 @@ body {
     content: 'Найкращі товари для вашого дому';
     position: absolute;
     top: 100px;
-    left: 50px;
-    width: 300px;
+    left: 20px;
+    width: 100%;
+    max-width: 80%;
     font-size: 40px;
     font-weight: 600;
     color: #fff;
@@ -69,8 +70,9 @@ body {
     content: 'за низькими цінами';
     position: absolute;
     top: 250px;
-    left: 50px;
-    width: 300px;
+    left: 20px;
+    width: 100%;
+    max-width: 80%;
     font-size: 20px;
     font-weight: 400;
     color: #fff;
@@ -93,24 +95,28 @@ body {
 }
 
 .main {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px;
 }
 
 .main .item{
-  width: 30%;
-  margin-bottom: 50px;
+  width: 100%;
   background: #f5f5f5;
   overflow: hidden;
   position: relative;
   padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .main .item img {
-  height: 70%;
+  height: clamp(180px, 25vh, 340px);
   width: 100%;
+  object-fit: contain;
+  display: block;
   border-radius: 10px 10px 0 0;
   transition: transform 500ms ease;
   cursor: pointer;
@@ -137,6 +143,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   font-weight: 600;
+  margin-top: auto;
   transition: transform 500ms ease;
 }
 
@@ -202,6 +209,11 @@ body {
   width: 50%;
 }
 
+.shop-cart .item {
+  border: 1px solid rgba(210, 202, 202, 0.75);
+  border-radius: 15px;
+  padding: 5px 0 10px 0;
+}
 
 .shop-cart .item h2 {
   font-size: 22px;
@@ -227,3 +239,69 @@ body {
   transform: scale(1.5);
 }
 
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 10px;
+}
+
+
+
+
+@media screen and (max-width: 730px) {
+  body {
+    margin: 0;
+  }
+  .hh3 {
+    margin-left: 10px;
+  }
+  .main {
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-left: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #banner {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hh3 {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .lu {
+    gap: 12px;
+  }
+
+}
+
+@media screen and (max-width: 340px) {
+  #Header {
+    flex-wrap: wrap;
+  }
+  .hh3 {
+    font-size: 22px;
+    white-space: nowrap;
+    width: 100%;
+    margin-left: 15px;
+  }
+  .lu {
+    gap: 12px;
+    margin: 20px 0 0 15px;
+  }
+  #banner {
+    margin: 25px 0;
+  }
+}
